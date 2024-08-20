@@ -67,3 +67,4 @@ for(number=2;number<=10;number=number+2)
 {
    console.log(number)
 }
+

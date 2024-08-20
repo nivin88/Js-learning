@@ -4,3 +4,78 @@
 <h1 id="two">
     wellcome
 </h1>
+<input id="num1">
+<input id="num2">
+<button>Add</button>
+<p>Result</p>
+ <script></script>
+
+ <!DOCTYPE html>
+ <html>
+    <body>
+    <h1>creating javaScript objects</h1>
+    <h2>using name </h2>
+    <p id="name1"></p>
+    <script>
+        const person={};
+
+        person.firstName= "Ram";
+        person.lastName="kumar";
+        person.age= 20;
+        person.place="CBE";
+
+        document.getElementById("name1").innerHTML=
+        person.firstName + " is " + person.age + " years old .";
+    </script>
+ </body>
+ </html>
+
+
+ <!DOCTYPE html>
+ <html>
+  <body>
+    <h1>js</h1>
+    <h2>map method</h2>
+    <p>creating a map from an array:</p>
+    <p id="demo1"></p>
+    <script>
+const fruits = new Map([
+
+        ["oranges", 300],
+        ["mangoes", 250],
+        ["apples", 400]
+    ]);
+    
+    let numb = fruits.get("mangoes");
+    document.getElementById("demo1").innerHTML = "There are " + numb + " mangoes.";
+    </script>
+</body>
+</html>
+
+<html>
+<body>
+<h1>JavaScript Sets</h1>
+<h2>The add() Method</h2>
+
+<p>The add() method adds values to a set:</p>
+
+<p id="demo"></p>
+
+<script>
+const letters = new Set();
+
+letters.add("a");
+letters.add("b");
+letters.add("c");
+letters.add("c");
+letters.add("c");
+letters.add("c");
+letters.add("c");
+letters.add("c");
+
+
+document.getElementById("demo").innerHTML = "The set has " + letters.size + " values.";
+</script>
+
+</body>
+</html>
