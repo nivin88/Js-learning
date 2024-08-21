@@ -67,4 +67,28 @@ for(number=2;number<=10;number=number+2)
 {
    console.log(number)
 }
+  
+// logical AudioNode(false an all statement are false)
+
+console.log(false && true && true)
+
+console.log(true || false ||true)
+// (! is a not operators)
+console.log(!false)
+
+var color = "green"
+if(color == "red")
+{
+   console.log("stop")
+}
+
+if(color == "yellow")
+{
+   console.log(" ready")
+}
+
+if(color == "green")
+{
+   console.log("go")
+}
 
