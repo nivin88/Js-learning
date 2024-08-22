@@ -9,28 +9,6 @@
 <button>Add</button>
 <p>Result</p>
  <script></script>
-
- <!DOCTYPE html>
- <html>
-    <body>
-    <h1>creating javaScript objects</h1>
-    <h2>using name </h2>
-    <p id="name1"></p>
-    <script>
-        const person={};
-
-        person.firstName= "Ram";
-        person.lastName="kumar";
-        person.age= 20;
-        person.place="CBE";
-
-        document.getElementById("name1").innerHTML=
-        person.firstName + " is " + person.age + " years old .";
-    </script>
- </body>
- </html>
-
-
  <!DOCTYPE html>
  <html>
   <body>
@@ -77,26 +55,43 @@ letters.add("c");
 document.getElementById("demo").innerHTML = "The set has " + letters.size + " values.";
 </script>
 
-</body>
-</html>
+
 <style>
     div{
         background-color: red;
         height: 100px;
         width: 100px;
+        transition: 1s;
+     }
+     .widthmax2{
+        width: 800px;
      }
 
 </style>
-<div id="call">
-
-</div>
+<div id="call"></div>
 <button onclick="change()">click</button>
 <script>
-    var cll=document.getElementById("call")
+    var call=document.getElementById("call")
 
     function change()
     {
-        call.style.background-color= "green";
+        call.setAttribute("class","widthmax2")
+        // call.style.backgroundColor="green"
     }
+</script><br>
 
+
+<input id="dava" onkeyup="update()">
+<!-- <button onclick="update()">click it</button> -->
+<h1 id="number2"></h1>
+<script>
+    var dava=document.getElementById("dava")
+    var number2=document.getElementById("number2")
+
+    function update()
+    {
+        number2.textContent=dava.value
+    }
 </script>
+
+<p></p>
