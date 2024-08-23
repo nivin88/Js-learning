@@ -68,6 +68,7 @@ document.getElementById("demo").innerHTML = "The set has " + letters.size + " va
      }
 
 </style>
+
 <div id="call"></div>
 <button onclick="change()">click</button>
 <script>
@@ -76,13 +77,11 @@ document.getElementById("demo").innerHTML = "The set has " + letters.size + " va
     function change()
     {
         call.setAttribute("class","widthmax2")
-        // call.style.backgroundColor="green"
+        call.style.backgroundColor="green"
     }
 </script><br>
-
-
 <input id="dava" onkeyup="update()">
-<!-- <button onclick="update()">click it</button> -->
+<button onclick="update()">click it</button>
 <h1 id="number2"></h1>
 <script>
     var dava=document.getElementById("dava")
@@ -94,4 +93,69 @@ document.getElementById("demo").innerHTML = "The set has " + letters.size + " va
     }
 </script>
 
-<p></p>
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript object</h1>
+    <p>the object.assign() method</p>
+
+    <p id="jd2"></p>
+    <script>
+        const person1= {
+            firstName: "jeva",
+            lastName: "kumar",
+            age: 40,
+            eyeColor: "red"
+        };
+        const person2 = {firstName: "kavin",lastName: "kumar"};
+        Object.assign(person1,person2);
+        let text = Object.entries(person1);
+        document.getElementById("jd2").innerHTML = text;
+    </script>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>    
+<h1>javascript</h1>
+<h2>the object.assign() method</h2>
+
+<p id="Hello2"></p>
+
+<script>
+
+const fruits = [
+    {name:"oranges", quantity:200},
+    {name:"apples", quantity:500},
+    {name:"bananas", quantity:400},
+    {name:"grapes", quantity:150}
+];
+
+function myhello({ quantity }) {
+    return quantity > 200 ? "ok" : "low";
+}
+
+const result = Object.groupBy(fruits, myhello);
+
+let text ="These fruits are ok: <br>";
+for (let [x,y] of result.ok.entries()) {
+    text += y.name + " " + y.quantity + "<br>";
+
+}
+
+text += "<br>These fruits are low: <br>";
+for (let [x,y] of result.low.entries()) {
+    text += y.name + " " + y.quantity + "<br>";
+}
+
+document.getElementById("Hello2").innerHTML = text;
+
+</script>
+    
+</body>
+</html>
+
+
+
