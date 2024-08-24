@@ -109,7 +109,7 @@ document.getElementById("demo").innerHTML = "The set has " + letters.size + " va
         };
         const person2 = {firstName: "kavin",lastName: "kumar"};
         Object.assign(person1,person2);
-        let text = Object.entries(person1);
+        let texte = Object.entries(person1);
         document.getElementById("jd2").innerHTML = text;
     </script>
     
@@ -126,7 +126,7 @@ document.getElementById("demo").innerHTML = "The set has " + letters.size + " va
 
 <script>
 
-const fruits = [
+const fruit = [
     {name:"oranges", quantity:200},
     {name:"apples", quantity:500},
     {name:"bananas", quantity:400},
@@ -157,5 +157,95 @@ document.getElementById("Hello2").innerHTML = text;
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Class Inheritance</h1>
+
+<p>Use the "extends" keyword to inherit all methods from another class.</p>
+<p>Use the "super" method to call the parent's constructor function.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+const myCar = new Model("Ford", "Mustang");
+document.getElementById("demo").innerHTML = myCar.show();
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The JavaScript <i>this</i> Keyword</h1>
+<p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+<p>Because <b>fullName</b> is a method of the person object.</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+</body>
+</html>
 
 
