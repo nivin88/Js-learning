@@ -1,4 +1,4 @@
-<p id="one">
+<!-- <p id="one">
     hello
 </p>
 <h1 id="two">
@@ -228,10 +228,48 @@ function myFunction() {
 <p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
 <p>Because <b>fullName</b> is a method of the person object.</p>
 
-<p id="demo"></p>
+<p id="demo"></p> -->
 
 <script>
 // Create an object:
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   id: 5566,
+//   fullName : function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// };
+
+// Display data from the object:
+// document.getElementById("demo").innerHTML = person.fullName();
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>With "use strict":</h2>
+<h3>Deleting a variable (or object) is not allowed.</h3>
+<p>Activate debugging in your browser (F12) to see the error report.</p>
+<script>
+"use strict";
+let x = 3.14;
+ x;    // This will cause an error 
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The JavaScript <i>this</i> Keyword</h1>
+<p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+<p>Because <b>fullName</b> is a method of the person object.</p>
+
+<p id="demo5"></p>
+<script>
 const person = {
   firstName: "John",
   lastName: "Doe",
@@ -240,12 +278,29 @@ const person = {
     return this.firstName + " " + this.lastName;
   }
 };
-
-// Display data from the object:
-document.getElementById("demo").innerHTML = person.fullName();
+document.getElementById("demo5").innerHTML = person.fullName();
 </script>
-
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Classes</h1>
+<p>Creating two car objects from a car class:</p>
+<p id="demo"></p>
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+const myCar1 = new Car("Ford", 2014);
+const myCar2 = new Car("Audi", 2019);
 
+document.getElementById("demo").innerHTML =
+myCar1.name + " " + myCar2.name;
+</script>
+</body>
+</html>
