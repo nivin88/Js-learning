@@ -1,4 +1,4 @@
-<!-- <p id="one">
+<p id="one">
     hello
 </p>
 <h1 id="two">
@@ -228,21 +228,21 @@ function myFunction() {
 <p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
 <p>Because <b>fullName</b> is a method of the person object.</p>
 
-<p id="demo"></p> -->
+<p id="demo"></p>
 
 <script>
 // Create an object:
-// const person = {
-//   firstName: "John",
-//   lastName: "Doe",
-//   id: 5566,
-//   fullName : function() {
-//     return this.firstName + " " + this.lastName;
-//   }
-// };
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
 
 // Display data from the object:
-// document.getElementById("demo").innerHTML = person.fullName();
+document.getElementById("demo").innerHTML = person.fullName();
 </script>
 </body>
 </html>
@@ -304,3 +304,72 @@ myCar1.name + " " + myCar2.name;
 </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Sets</h1>
+<h2>The keys() Method</h2>
+
+<p>The keys() method returns a Set Iterator with all the values from a Set.</p>
+
+<p id="demo"></p>
+
+<script>
+// Create a Set
+const letters = new Set(["a","b","c"]);
+
+// Create an Iterator
+const myIterator = letters.keys();
+
+// List all Elements
+let text = "";
+for (const x of myIterator) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Operators</h1>
+<h2>The typeof Operator</h2>
+<p>The typeof operator returns object for both objects, arrays, maps, sets, and null.</p>
+<p>The typeof operator does not return object for functions.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+typeof {name:'John'} + "<br>" +
+typeof [1,2,3,4] + "<br>" +
+typeof new Map() + "<br>" +
+typeof new Set() + "<br>" +
+typeof null + "<br>" +
+typeof function myFunc(){};
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+</body>
+</html> 
+
