@@ -1,375 +1,165 @@
-<p id="one">
-    hello
-</p>
-<h1 id="two">
-    wellcome
-</h1>
-<input id="num1">
-<input id="num2">
-<button>Add</button>
-<p>Result</p>
- <script></script>
- <!DOCTYPE html>
- <html>
-  <body>
-    <h1>js</h1>
-    <h2>map method</h2>
-    <p>creating a map from an array:</p>
-    <p id="demo1"></p>
-    <script>
-const fruits = new Map([
-
-        ["oranges", 300],
-        ["mangoes", 250],
-        ["apples", 400]
-    ]);
-    
-    let numb = fruits.get("mangoes");
-    document.getElementById("demo1").innerHTML = "There are " + numb + " mangoes.";
-    </script>
-</body>
-</html>
-
+<!-- <!DOCTYPE html>
 <html>
 <body>
-<h1>JavaScript Sets</h1>
-<h2>The add() Method</h2>
-
-<p>The add() method adds values to a set:</p>
+  <h2>my name javascript</h2>
+  <p>hello</p>
+  <button type="button" onclick="document.write(10 && 20 , 20*30)">click</button>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Dates</h1>
+<h2>JavaScript getMonth()</h2>
+<p>Return the month as a number.</p>
+<p>You can use an array of names to return the month as a name:</p>
 
 <p id="demo"></p>
 
 <script>
-const letters = new Set();
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-letters.add("a");
-letters.add("b");
-letters.add("c");
-letters.add("c");
-letters.add("c");
-letters.add("c");
-letters.add("c");
-letters.add("c");
-
-
-document.getElementById("demo").innerHTML = "The set has " + letters.size + " values.";
+const d = new Date();
+let month = months[d.getMonth()];
+document.getElementById("demo").innerHTML = month;
 </script>
 
+</body>
+</html> -->
 
-<style>
-    div{
-        background-color: red;
-        height: 100px;
-        width: 100px;
-        transition: 1s;
-     }
-     .widthmax2{
-        width: 800px;
-     }
-
-</style>
-
-<div id="call"></div>
-<button onclick="change()">click</button>
-<script>
-    var call=document.getElementById("call")
-
-    function change()
-    {
-        call.setAttribute("class","widthmax2")
-        call.style.backgroundColor="green"
-    }
-</script><br>
-<input id="dava" onkeyup="update()">
-<button onclick="update()">click it</button>
-<h1 id="number2"></h1>
-<script>
-    var dava=document.getElementById("dava")
-    var number2=document.getElementById("number2")
-
-    function update()
-    {
-        number2.textContent=dava.value
-    }
-</script>
-
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <body>
-    <h1>JavaScript object</h1>
-    <p>the object.assign() method</p>
 
-    <p id="jd2"></p>
-    <script>
-        const person1= {
-            firstName: "jeva",
-            lastName: "kumar",
-            age: 40,
-            eyeColor: "red"
-        };
-        const person2 = {firstName: "kavin",lastName: "kumar"};
-        Object.assign(person1,person2);
-        let texte = Object.entries(person1);
-        document.getElementById("jd2").innerHTML = text;
-    </script>
-    
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<body>    
-<h1>javascript</h1>
-<h2>the object.assign() method</h2>
-
-<p id="Hello2"></p>
+<h1>JavaScript Booleans</h1>
+<p id="demo"></p>
 
 <script>
-
-const fruit = [
-    {name:"oranges", quantity:200},
-    {name:"apples", quantity:500},
-    {name:"bananas", quantity:400},
-    {name:"grapes", quantity:150}
-];
-
-function myhello({ quantity }) {
-    return quantity > 200 ? "ok" : "low";
-}
-
-const result = Object.groupBy(fruits, myhello);
-
-let text ="These fruits are ok: <br>";
-for (let [x,y] of result.ok.entries()) {
-    text += y.name + " " + y.quantity + "<br>";
-
-}
-
-text += "<br>These fruits are low: <br>";
-for (let [x,y] of result.low.entries()) {
-    text += y.name + " " + y.quantity + "<br>";
-}
-
-document.getElementById("Hello2").innerHTML = text;
-
+document.getElementById("demo").innerHTML =
+"100 is " + Boolean(100) + "<br>" +
+"3.14 is " + Boolean(3.14) + "<br>" +
+"-15 is " + Boolean(-15) + "<br>" +
+"Any (not empty) string is " + Boolean("Hello") + "<br>" +
+"Even the string 'false' is " + Boolean('false') + "<br>" +
+"Any expression (except zero) is " + Boolean(1 + 7 + 3.14);
 </script>
-    
-</body>
-</html>
 
-<!DOCTYPE html>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
 <html>
 <body>
-<h1>JavaScript Class Inheritance</h1>
 
-<p>Use the "extends" keyword to inherit all methods from another class.</p>
-<p>Use the "super" method to call the parent's constructor function.</p>
+<h2>JavaScript if .. else</h2>
+
+<p>A time-based greeting:</p>
 
 <p id="demo"></p>
 
 <script>
-class Car {
-  constructor(brand) {
-    this.carname = brand;
-  }
-  present() {
-    return 'I have a ' + this.carname;
-  }
+const time = new Date().getHours();
+let greeting;
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
 }
-
-class Model extends Car {
-  constructor(brand, mod) {
-    super(brand);
-    this.model = mod;
-  }
-  show() {
-    return this.present() + ', it is a ' + this.model;
-  }
-}
-
-const myCar = new Model("Ford", "Mustang");
-document.getElementById("demo").innerHTML = myCar.show();
+document.getElementById("demo").innerHTML = greeting;
 </script>
 
 </body>
-</html>
+</html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <body>
 
-<h2>JavaScript Prompt</h2>
-
-<button onclick="myFunction()">Try it</button>
+<h2>Create Object from JSON String</h2>
 
 <p id="demo"></p>
 
 <script>
-function myFunction() {
-  let text;
-  let person = prompt("Please enter your name:", "Harry Potter");
-  if (person == null || person == "") {
-    text = "User cancelled the prompt.";
-  } else {
-    text = "Hello " + person + "! How are you today?";
-  }
-  document.getElementById("demo").innerHTML = text;
-}
+let text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+const obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
 </script>
 
 </body>
-</html>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
 
+<h2>My First Web Page</h2>
+
+<p>Activate debugging in your browser (Chrome, IE, Firefox) with F12, and select "Console" in the debugger menu.</p>
+
+<script>
+a = 5;
+b = 6;
+c = a + b;
+console.log(c);
+</script>
+
+</body>
+</html>  -->
 <!DOCTYPE html>
 <html>
 <body>
 
-<h1>The JavaScript <i>this</i> Keyword</h1>
-<p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
-<p>Because <b>fullName</b> is a method of the person object.</p>
-
+<h2>JavaScript Literal Constructors</h2>
 <p id="demo"></p>
 
 <script>
-// Create an object:
-const person = {
-  firstName: "John",
-  lastName: "Doe",
-  id: 5566,
-  fullName : function() {
-    return this.firstName + " " + this.lastName;
-  }
-};
-
-// Display data from the object:
-document.getElementById("demo").innerHTML = person.fullName();
-</script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<body>
-  <h2>With "use strict":</h2>
-<h3>Deleting a variable (or object) is not allowed.</h3>
-<p>Activate debugging in your browser (F12) to see the error report.</p>
-<script>
-"use strict";
-let x = 3.14;
- x;    // This will cause an error 
-</script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<body>
-<h1>The JavaScript <i>this</i> Keyword</h1>
-<p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
-<p>Because <b>fullName</b> is a method of the person object.</p>
-
-<p id="demo5"></p>
-<script>
-const person = {
-  firstName: "John",
-  lastName: "Doe",
-  id: 5566,
-  fullName : function() {
-    return this.firstName + " " + this.lastName;
-  }
-};
-document.getElementById("demo5").innerHTML = person.fullName();
-</script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<body>
-<h1>JavaScript Classes</h1>
-<p>Creating two car objects from a car class:</p>
-<p id="demo"></p>
-<script>
-class Car {
-  constructor(name, year) {
-    this.name = name;
-    this.year = year;
-  }
-}
-const myCar1 = new Car("Ford", 2014);
-const myCar2 = new Car("Audi", 2019);
+let x1 = "";
+let x2 = 0;
+let x3 = false;
+const x4 = {};
+const x5 = [];
+const x6 = /()/;
+const x7 = function(){};
 
 document.getElementById("demo").innerHTML =
-myCar1.name + " " + myCar2.name;
+"x1: " + typeof x1 + "<br>" +
+"x2: " + typeof x2 + "<br>" +
+"x3: " + typeof x3 + "<br>" +
+"x4: " + typeof x4 + "<br>" +
+"x5: " + typeof x5 + "<br>" +
+"x6: " + typeof x6 + "<br>" +
+"x7: " + typeof x7 + "<br>";
 </script>
+
 </body>
 </html>
-
 <!DOCTYPE html>
 <html>
 <body>
-<h1>JavaScript Sets</h1>
-<h2>The keys() Method</h2>
 
-<p>The keys() method returns a Set Iterator with all the values from a Set.</p>
+<h2>JavaScript Variables</h2>
+
+<p>Remove the comment (at the beginning of the lines) to test each case:</p>
 
 <p id="demo"></p>
 
 <script>
-// Create a Set
-const letters = new Set(["a","b","c"]);
+let x = 5;
+//x = 5 + 7;    // x.valueOf() is 12, typeof x is a number
+//x = 5 + "7";  // x.valueOf() is 57, typeof x is a string
+//x = "5" + 7;  // x.valueOf() is 57, typeof x is a string
+//x = 5 - 7;    // x.valueOf() is -2, typeof x is a number
+//x = 5 - "7";  // x.valueOf() is -2, typeof x is a number
+//x = "5" - 7;  // x.valueOf() is -2, typeof x is a number
+//x = 5 - "x";  // x.valueOf() is NaN, typeof x is a number
 
-// Create an Iterator
-const myIterator = letters.keys();
-
-// List all Elements
-let text = "";
-for (const x of myIterator) {
-  text += x + "<br>";
-}
-
-document.getElementById("demo").innerHTML = text;
+document.getElementById("demo").innerHTML = x.valueOf() + " " + typeof x;
 </script>
 
 </body>
 </html>
-
-
-<!DOCTYPE html>
-<html>
-<body>
-<h1>JavaScript Operators</h1>
-<h2>The typeof Operator</h2>
-<p>The typeof operator returns object for both objects, arrays, maps, sets, and null.</p>
-<p>The typeof operator does not return object for functions.</p>
-
-<p id="demo"></p>
-
-<script>
-document.getElementById("demo").innerHTML = 
-typeof {name:'John'} + "<br>" +
-typeof [1,2,3,4] + "<br>" +
-typeof new Map() + "<br>" +
-typeof new Set() + "<br>" +
-typeof null + "<br>" +
-typeof function myFunc(){};
-</script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<body>
-
-<h2>My First JavaScript</h2>
-
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
-
-<p id="demo"></p>
-
-</body>
-</html> 
-
