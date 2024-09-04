@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up or Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #465a6e;
+            border-radius: 3px;
+            background-color: #465a6e;
+            color: white;
+            box-sizing: border-box;
+        }
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #8898a8;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-active {
+            background-color: #2ecc71;
+            color: white;
+        }
+        .btn-inactive {
+            background-color: #34495e;
+            color: #8898a8;
+        }
+        .btn-submit {
+            background-color: #2ecc71;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btn-group">
+            <button id="signupBtn" class="btn btn-active">Sign Up</button>
+            <button id="loginBtn" class="btn btn-inactive">Log In</button>
+        </div>
+        <form id="signup-form">
+            <h2>Sign Up for Free</h2>
+            <div class="form-group">
+                <input type="text" id="firstName" placeholder="First Name*" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="lastName" placeholder="Last Name*" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="signupEmail" placeholder="Email Address*" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="signupPassword" placeholder="Set A Password*" required>
+            </div>
+            <button type="submit" class="btn-submit">GET STARTED</button>
+        </form>
+        <form id="login-form" class="hidden">
+            <h2>Log In</h2>
+            <div class="form-group">
+                <input type="email" id="loginEmail" placeholder="Email Address*" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="loginPassword" placeholder="Password*" required>
+            </div>
+            <button type="submit" class="btn-submit">LOG IN</button>
+        </form>
+    </div>
+
+    <script>
+        const signupBtn = document.getElementById('signupBtn');
+        const loginBtn = document.getElementById('loginBtn');
+        const signupForm = document.getElementById('signup-form');
+        const loginForm = document.getElementById('login-form');
+
+        function showSignup() {
+            signupBtn.classList.add('btn-active');
+            signupBtn.classList.remove('btn-inactive');
+            loginBtn.classList.add('btn-inactive');
+            loginBtn.classList.remove('btn-active');
+            signupForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        }
+
+        function showLogin() {
+            loginBtn.classList.add('btn-active');
+            loginBtn.classList.remove('btn-inactive');
+            signupBtn.classList.add('btn-inactive');
+            signupBtn.classList.remove('btn-active');
+            loginForm.classList.remove('hidden');
+            signupForm.classList.add('hidden');
+        }
+
+        signupBtn.addEventListener('click', showSignup);
+        loginBtn.addEventListener('click', showLogin);
+
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('Sign up form submitted');
+            alert('Sign up successful!');
+        });
+
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('Login form submitted');
+            alert('Login successful!');
+        });
+    </script>
+</body>
+</html>
