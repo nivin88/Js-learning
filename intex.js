@@ -91,6 +91,11 @@ if(color == "green")
 {
    console.log("go")
 }
+ 
+var a=5
+{
+   console.log(a)
+}
 
 
 

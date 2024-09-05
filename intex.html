@@ -404,3 +404,62 @@ document.getElementById("demo").innerHTML = text;
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Web Page</h2>
+
+<p>Activate debugging in your browser (Chrome, IE, Firefox) with F12, and select "Console" in the debugger menu.</p>
+
+<script>
+a = 5;
+b = 6;
+c = a + b;
+console.log(c);
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Common JavaScript Mistakes</h2>
+
+<p>In regular comparison, data type does not matter. This if statement returns true:</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 10;
+let y = "10";
+document.getElementById("demo").innerHTML = Boolean(x == y);
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Common JavaScript Mistakes</h2>
+
+<p>It is a common mistake to forget that switch statements use strict comparison.</p>
+<p>This will not work:</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 10;
+switch(x) {
+  case "10": document.getElementById("demo").innerHTML = "Hello";
+}
+</script>
+
+</body>
+</html>
+
+
