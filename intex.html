@@ -462,4 +462,111 @@ switch(x) {
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Operators</h1>
+<h2>The typeof Operator</h2>
+
+<p>The typeof operator returns the type of a variable or an expression:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"'John' is " + typeof "John" + "<br><br>" +
+"('John' + 'Doe') is " + typeof ("John" + "Doe") + "<br><br>" +
+"3.14 is " + typeof 3.14 + "<br><br>" +
+"33 is " + typeof (33 + 66) + "<br><br>" +
+"(33 + 66) is " + typeof 33 + "<br><br>" +
+"NaN is " + typeof NaN + "<br><br>" +
+"true is " + typeof true + "<br><br>" +
+"false is " + typeof false + "<br><br>" +
+"1234n is " + typeof 1234n + "<br><br>" +
+"Symbol() is " + typeof Symbol() + "<br><br>" +
+"x is " + typeof x;
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Properties</h1>
+<h2>The constructor Property</h2>
+
+<p>The constructor property returns the constructor function for a variable or an 
+object.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+  "john".constructor + "<br>" +
+  (3.14).constructor + "<br>" +
+  false.constructor + "<br>" +
+  1234n.constructor + "<br>" +
+  {}.constructor + "<br>" +
+  [].constructor + "<br>" +
+  new Date().constructor + "<br>" +
+  new Set().constructor + "<br>" +
+  new Map().constructor + "<br>" +
+  function () {}.constructor;
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Operators</h1>
+<h2>The typeof Operator</h2>
+
+<p>The typeof operator returns the type of a variable, object, function or expression:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"'John' is " + typeof "John" + "<br><br>" +
+"('John' + 'Doe') is " + typeof ("John" + "Doe") + "<br><br>" +
+"3.14 is " + typeof 3.14 + "<br><br>" +
+"(33 + 66) is " + typeof (33 + 66) + "<br><br>" +
+"NaN is " + typeof NaN + "<br><br>" +
+"1234n is " + typeof 1234n + "<br><br>" +
+"true is " + typeof true + "<br><br>" +
+"false is " + typeof false + "<br><br>" +
+"[1, 2, 3, 4] is " + typeof [1, 2, 3, 4] + "<br><br>" +
+"{name:'John', age:34} is " + typeof {name:'John', age:34} + "<br><br>" +
+"new Date() is " + typeof new Date() + "<br><br>" +
+"new Set() is " + typeof new Set() + "<br><br>" +
+"new Map() is " + typeof new Map() + "<br><br>" +
+"Symbol() is " + typeof Symbol() + "<br><br>" +
+"function () {} is " + typeof function () {} + "<br><br>" +
+"x is " + typeof x + "<br><br>" +
+"null is " + typeof null;
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Operators</h1>
+<h2>The void Operator</h2>
+
+<p>
+<a href="javascript:void(0);">Useless link</a>
+</p>
+
+<p>
+<a href="javascript:void(document.body.style.backgroundColor='red');">
+Click me to change the background color of body to red.</a>
+</p>
+
+</body>
+</html>
 
