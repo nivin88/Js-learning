@@ -97,6 +97,32 @@ var a=5
    console.log(a)
 }
 
+var a=20
+var b=10
+var c=a*b
+console.log(c)
+
+var a=25
+var b=a++
+console.log(b)
+console.log(a)
+{
+let a=20
+let b=a--
+console.log(b)
+console.log(a)
+}
+
+{
+   const a=30
+   const b=40
+   const c=a-b
+   console.log(c)
+}
+
+var a="Banana"
+var b=30
+console.log(typeof(a))
 
 
 
