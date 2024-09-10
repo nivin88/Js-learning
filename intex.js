@@ -124,5 +124,32 @@ var a="Banana"
 var b=30
 console.log(typeof(a))
 
+var a=30
+var b=45
 
+function add()
+{
+   console.log(a+b)
+}
+ add()
 
+ var a="van"
+ var b="car"
+ var c="bus"
+function favourite()
+{
+   console.log("This is a"+" car")
+   console.log("This is a"+" van")
+   console.log("This is a"+" bus")
+}
+favourite()
+
+var length=30
+var breadth=25  
+ function area(l,d)
+ {
+   var t=l+d
+   console.log("area is:"+t)
+
+ }
+ area(30,25 )
