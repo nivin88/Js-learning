@@ -6,9 +6,9 @@
     <h1 id="pp1">Hello world</h1>
     <!-- <p id="pp2">Hi my boys</p> -->
     <button onclick="change()">change</button><br><br>
-    <input id="num1" value="">
-    <input id="num2">
-    <button>add</button>
+    <input id="num1" value="35">
+    <input id="num2" value="43">
+    <button onclick="resulte()">add</button>
     <p id="result">result</p>
   </body>
   <script>
@@ -20,11 +20,39 @@
     h1.textContent ="Hello VNB"
 
    }
-  var box1=document.getElementById("num1")
-  var box2=document.getElementById("num2")
-  var result = document.getElementById("result")
- 
-  console.log(box1.value)
-  console.log(box2.value)
+
+   var box1=document.getElementById("num1")
+   var box2=document.getElementById("num2")
+   var result=document.getElementById("result")
+
+  //  console.log(box1.value)
+  //  console.log(box2.value)
+  var box1value= Number(box1.value)
+  var box2value= Number(box2.value)
+
+  var total = box1value+box2value
+
+  function resulte()
+  {
+    result.textContent=total
+  }
+  
 </script>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript new Date()</h1>
+<p>A Date() object can be created with a specified date and time:</p>
+
+<p id="demo"></p>
+
+<script>
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
 </html>
