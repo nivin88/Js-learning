@@ -153,3 +153,35 @@ var breadth=25
 
  }
  area(30,25 )
+
+ for( let i=10;i<=20;i++)
+   {
+   if(i%3===0){
+       console.log(i)
+   }
+   }
+
+   for(var i=1;i<=10;i++)
+       if(i%2==0){
+           console.log(i)
+       }
+
+       for(count=1;count<=20;count=count+1)
+         {
+             console.log("agalya")
+         }
+     
+         for(count=1;count<=10;count=count+3)
+             {
+                 console.log(count)
+             }
+
+             var score = 80;
+
+             if (score < 50) {
+                 console.log("You need to improve");
+             } else if (score <= 70) {
+                 console.log("Good job");
+             } else if (score > 70) {
+                 console.log("Excellent performance");
+             }
