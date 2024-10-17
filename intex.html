@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <!-- operators -->
+     <!-- Assignment Operator -->
 <p id="tea"></p>
 <script>
+   
     var x=10;
     var y=29;
     let total= x+y
     document.getElementById('tea').innerHTML = "Total number of:"+total;
 </script>
-
+<!-- subtraction operator -->
 <p id="tea2"></p>
 <script>
     var x=20;
@@ -22,40 +26,163 @@
     let total1= x-y
     document.getElementById('tea2').innerHTML = "total number of:"+total2;
 </script>
-
+	<!-- Division -->
 <p id="tea4"></p>
 <script>
-    var a=75;
-    var b=60;
-    let total2= a/b
-    document.getElementById('tea4').innerHTML = "Total number of:"+total3;
+  var a=75;
+  var b=60;
+  let total2= a/b
+  document.getElementById('tea4').innerHTML = "Total number of:"+total3;
 </script>
+    
 
+ <!-- Multiplication Operator -->
 <p id="cookies1"></p>
-<script>
-    var cok1 =75;
-    var cok3 =40;
-    let total3= vg1*vg3;
-    document.getElementById('cookies1').innerHTML = "Total number of:"+total4;
+<script> 
+ var cok1 =75;
+  var cok3 =40;
+  let total3= vg1*vg3;
+  document.getElementById('cookies1').innerHTML = "Total number of:"+total4;
 </script>
 
+ <!-- Modulus -->
 <p id="cookies2"></p>
 <script>
-    var cok2=40;
-    var cok4=35;
-    let total4= cok2%cok4;
+   var cok2=40;
+  var cok4=35;
+  let total4= cok2%cok4;
     document.getElementById('cookies2').innerHTML = "Total number of:"+total4;
 </script>
+   
 
+ <!-- Exponentiation   -->
 <p id="cookies"></p>
 <script>
-    var cok1=75;
+  var cok1=75;
     var cok2=40;
-    let result= cok1**cok2;
-    document.getElementById('cookies').innerHTML = "Total number of:"+result;
+    let result1= cok1**cok2;
+    document.getElementById('cookies').innerHTML = "Total number of:"+result1;
+</script>
+    
+
+ <!-- String Comparison -->
+<p id="demo2"></p>
+<script>
+  let text1 = "A";
+let text2 = "B";
+let result2 = text1 < text2;
+document.getElementById("demo2").innerHTML = "Is A less than B? " + result2;
+</script>
+
+<!-- object -->
+<p id="demo"></p>
+<script>
+const car = {type:"Triber",
+  model:"2019",  
+  color:"Blue"
+ }
+//    document.getElementById('demo').innerHTML = "The car type is " + car.type +" "+ car.model+" "+car.color;
+// document.getElementById('demo').innerHTML=car['type']
+let{type,color}=car;
+document.getElementById('demo').innerHTML=color+" "+ type;
+</script>
+
+<!-- switch -->
+<p id="Date1"></p> 
+<script>
+    let currentDate = new Date().getDate();
+    let message;
+
+    switch (currentDate) {
+        case 1:
+            message = "01/10/2024";
+            break;
+        case 2:
+            message = "02/10/2024";
+            break;
+        case 3:
+            message = "03/10/2024";
+            break;
+        case 4:
+            message = "04/10/2024";
+            break;
+        case 5:
+            message = "05/10/2024";
+            break;
+        case 6:
+            message = "06/10/2024";
+            break;
+        case 7:
+            message = "07/10/2024";
+            break;
+        case 8:
+            message = "08/10/2024";
+            break;
+        case 9:
+            message = "09/10/2024";
+            break;
+        case 10:
+            message = "10/10/2024";
+            break;
+        case 11:
+            message = "11/10/2024";
+            break;
+        case 12:
+            message = "12/10/2024";
+            break;
+        case 13:
+            message = "13/10/2024";
+            break;
+        case 14:
+            message = "14/10/2024";
+            break;
+        case 15:
+            message = "15/10/2024";
+            break;
+        case 16:
+            message = "16/10/2024";
+            break;
+        case 17:
+            message = "17/10/2024";
+            break;
+        case 18:
+            message = "18/10/2024";
+            break;
+        case 19:
+            message = "19/10/2024";
+            break;
+        case 20:
+            message = "20/10/2024";
+            break;
+      
+        // default:
+        //     message = currentDate ; 
+    }
+
+    document.getElementById("Date1").innerHTML = "Current Date: " + message;
 </script>
 
 
-    
+<div id="container">
+      <form action="" onsubmit="mySubmit(event)" id="mymethodform">
+        <h1 class="rg bg-danger">Log in</h1>
+        <div id="input1">
+          <label for="username">UserName</label>
+          <input type="text" placeholder="Name"  name="username" id="username">
+          
+        </div>
+        <br>
+        <div id="input1">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" name="password" id="password">
+        </div>
+        <br>
+        <button id="submit1" type="submit">Login</button>
+      </form>
+      <div id="result"></div>
+</div>
+
+
+<script src="intex.js"></script>
 </body>
 </html>
